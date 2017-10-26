@@ -24,11 +24,11 @@ public class ActiveWave {
         double xoffset = offset * Math.cos(angle);
         double yoffset = offset * Math.sin(angle);
 
-        return new Point2D.Double(i + xoffset, j + yoffset);
+        return new Point2D.Double(i - xoffset, j - yoffset);
     }
 
     public void updateRadius() {
-        this.r += 1;
+        this.r += 5;
     }
 
     private double distance(double x1, double y1, double x2, double y2) {

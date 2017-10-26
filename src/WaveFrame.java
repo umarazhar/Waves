@@ -51,14 +51,16 @@ public class WaveFrame extends Canvas implements MouseListener {
         g2.fillRect(0, 0, this.grid.getWidth(), this.grid.getHeight());
 
         Point2D[][] activeGrid = this.grid.getActiveGrid();
-
-        g2.setColor(Color.blue);
+        Point2D[][] originalGrid = this.grid.getOriginalGrid();
 
         Ellipse2D ellipse;
         for (int i = 0; i < activeGrid.length; i++) {
             for (int j = 0; j < activeGrid[i].length; j++) {
-//                System.out.println(activeGrid[i][j]);
+//                g2.setColor(Color.blue);
                 Point2D point = activeGrid[i][j];
+
+                if (point.getX() != originalGrid[i][j].getX() ||  point.getY() != originalGrid[i][j].getY()) g2.setColor(Color.red);
+                else g2.setColor(Color.blue);
                 ellipse = new Ellipse2D.Double(point.getX() - PEG_SIZE / 2.0, point.getY() - PEG_SIZE / 2, PEG_SIZE, PEG_SIZE);
                 g2.fill(ellipse);
             }

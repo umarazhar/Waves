@@ -1,7 +1,7 @@
 public class Main {
 
     public static void main(String[] args) {
-        WaveGrid grid = new WaveGrid(400, 400);
+        WaveGrid grid = new WaveGrid(1000, 1000);
 
         WaveFrame frame = new WaveFrame(grid);
 

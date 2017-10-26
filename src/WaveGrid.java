@@ -39,9 +39,11 @@ public class WaveGrid {
     }
 
     public void triggerWave(double x, double y) {
-        ActiveWave newWave = new ActiveWave(x, y, 5);
+        ActiveWave newWave = new ActiveWave(x, y, 10);
 
-        this.activeWaves.add(newWave);
+        synchronized (this.activeWaves) {
+            this.activeWaves.add(newWave);
+        }
     }
 
     public void updatePoints() {
@@ -51,16 +53,18 @@ public class WaveGrid {
 
         Point2D[][] originalCopy = createGrid(this.width, this.height);
 
-        for (ActiveWave activeWave : this.activeWaves) {
-            for (int i = 0; i < originalCopy.length; i++) {
-                for (int j = 0; j < originalCopy[i].length; j++) {
-                    originalCopy[i][j] = activeWave.calculateOffset(originalCopy[i][j].getX(), originalCopy[i][j].getY());
+        synchronized (this.activeWaves) {
+            for (ActiveWave activeWave : this.activeWaves) {
+                for (int i = 0; i < originalCopy.length; i++) {
+                    for (int j = 0; j < originalCopy[i].length; j++) {
+                        originalCopy[i][j] = activeWave.calculateOffset(originalCopy[i][j].getX(), originalCopy[i][j].getY());
+                    }
                 }
+
+                activeWave.updateRadius();
+
+                if (activeWave.getRadius() > this.width * Math.sqrt(2)) toRemove.add(activeWave);
             }
-
-            activeWave.updateRadius();
-
-            if (activeWave.getRadius() > this.width) toRemove.add(activeWave);
         }
 
         this.activeGrid = originalCopy;
@@ -70,6 +74,10 @@ public class WaveGrid {
 
     public Point2D[][] getActiveGrid() {
         return this.activeGrid;
+    }
+
+    public Point2D[][] getOriginalGrid() {
+        return this.originalGrid;
     }
 
     public int getWidth() {
