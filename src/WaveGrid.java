@@ -43,7 +43,7 @@ public class WaveGrid {
     }
 
     public void triggerWave(double x, double y) {
-        ActiveWave newWave = new ActiveWave(x, y, 10);
+        ActiveWave newWave = new ActiveWave(x, y, 50);
 
         synchronized (this.activeWaves) {
             this.activeWaves.add(newWave);

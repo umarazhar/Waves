@@ -20,11 +20,18 @@ public class ActiveWave {
         if (Math.abs(offset) > period / 2) return new Point2D.Double(i, j);
 
         double angle = Math.atan2((j - y), (i - x));
+        double rx = x + r * Math.cos(angle);
+        double ry = y + r * Math.sin(angle);
 
-        double xoffset = offset * Math.cos(angle);
-        double yoffset = offset * Math.sin(angle);
+        double ratio = offset / (period / 2.0);
+        double angleRatio = (Math.PI / 2) * ratio - Math.PI / 2;
 
-        return new Point2D.Double(i - xoffset, j - yoffset);
+        double calculatedOffset = (period / 2) * Math.cos(angleRatio);
+
+        double xoffset = calculatedOffset * Math.cos(angle);
+        double yoffset = calculatedOffset * Math.sin(angle);
+
+        return new Point2D.Double(rx + xoffset, ry + yoffset);
     }
 
     public void updateRadius() {

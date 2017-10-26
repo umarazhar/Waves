@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18646828-5023-426a-ad11-850236f7f247" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WaveFrame.java" afterPath="$PROJECT_DIR$/src/WaveFrame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/waves/ActiveWave.class" afterPath="$PROJECT_DIR$/out/production/waves/ActiveWave.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/waves/WaveGrid.class" afterPath="$PROJECT_DIR$/out/production/waves/WaveGrid.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ActiveWave.java" afterPath="$PROJECT_DIR$/src/ActiveWave.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WaveGrid.java" afterPath="$PROJECT_DIR$/src/WaveGrid.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,8 +31,8 @@
       <file leaf-file-name="WaveFrame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/WaveFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="55" column="30" lean-forward="false" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+            <state relative-caret-position="262">
+              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -38,8 +41,8 @@
       <file leaf-file-name="WaveGrid.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/WaveGrid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="946">
-              <caret line="69" column="65" lean-forward="false" selection-start-line="69" selection-start-column="65" selection-end-line="69" selection-end-column="65" />
+            <state relative-caret-position="400">
+              <caret line="45" column="51" lean-forward="false" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
               <folding>
                 <element signature="e#1555#1567#0" expanded="true" />
                 <element signature="e#2346#2347#0" expanded="true" />
@@ -48,8 +51,8 @@
                 <element signature="e#2468#2469#0" expanded="true" />
                 <element signature="e#2560#2561#0" expanded="true" />
                 <element signature="e#2594#2595#0" expanded="true" />
-                <marker date="1509018351000" expanded="false" signature="2496:2507" ph=" { " />
-                <marker date="1509018351000" expanded="false" signature="2525:2531" ph=" }" />
+                <marker date="1509062308000" expanded="false" signature="2496:2507" ph=" { " />
+                <marker date="1509062308000" expanded="false" signature="2525:2531" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -58,8 +61,8 @@
       <file leaf-file-name="ActiveWave.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ActiveWave.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+            <state relative-caret-position="345">
+              <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -85,9 +88,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/ActiveWave.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/WaveFrame.java" />
+        <option value="$PROJECT_DIR$/src/ActiveWave.java" />
         <option value="$PROJECT_DIR$/src/WaveGrid.java" />
       </list>
     </option>
@@ -373,8 +376,8 @@
             <element signature="e#2468#2469#0" expanded="true" />
             <element signature="e#2560#2561#0" expanded="true" />
             <element signature="e#2594#2595#0" expanded="true" />
-            <marker date="1509018351000" expanded="false" signature="2496:2507" ph=" { " />
-            <marker date="1509018351000" expanded="false" signature="2525:2531" ph=" }" />
+            <marker date="1509062308000" expanded="false" signature="2496:2507" ph=" { " />
+            <marker date="1509062308000" expanded="false" signature="2525:2531" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -407,8 +410,8 @@
             <element signature="e#2468#2469#0" expanded="true" />
             <element signature="e#2560#2561#0" expanded="true" />
             <element signature="e#2594#2595#0" expanded="true" />
-            <marker date="1509018351000" expanded="false" signature="2496:2507" ph=" { " />
-            <marker date="1509018351000" expanded="false" signature="2525:2531" ph=" }" />
+            <marker date="1509062308000" expanded="false" signature="2496:2507" ph=" { " />
+            <marker date="1509062308000" expanded="false" signature="2525:2531" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -479,8 +482,8 @@
             <element signature="e#2468#2469#0" expanded="true" />
             <element signature="e#2560#2561#0" expanded="true" />
             <element signature="e#2594#2595#0" expanded="true" />
-            <marker date="1509018351000" expanded="false" signature="2496:2507" ph=" { " />
-            <marker date="1509018351000" expanded="false" signature="2525:2531" ph=" }" />
+            <marker date="1509062308000" expanded="false" signature="2496:2507" ph=" { " />
+            <marker date="1509062308000" expanded="false" signature="2525:2531" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -505,8 +508,8 @@
             <element signature="e#2468#2469#0" expanded="true" />
             <element signature="e#2560#2561#0" expanded="true" />
             <element signature="e#2594#2595#0" expanded="true" />
-            <marker date="1509018351000" expanded="false" signature="2496:2507" ph=" { " />
-            <marker date="1509018351000" expanded="false" signature="2525:2531" ph=" }" />
+            <marker date="1509062308000" expanded="false" signature="2496:2507" ph=" { " />
+            <marker date="1509062308000" expanded="false" signature="2525:2531" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -577,8 +580,8 @@
             <element signature="e#2468#2469#0" expanded="true" />
             <element signature="e#2560#2561#0" expanded="true" />
             <element signature="e#2594#2595#0" expanded="true" />
-            <marker date="1509018351000" expanded="false" signature="2496:2507" ph=" { " />
-            <marker date="1509018351000" expanded="false" signature="2525:2531" ph=" }" />
+            <marker date="1509062308000" expanded="false" signature="2496:2507" ph=" { " />
+            <marker date="1509062308000" expanded="false" signature="2525:2531" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -611,8 +614,8 @@
             <element signature="e#2468#2469#0" expanded="true" />
             <element signature="e#2560#2561#0" expanded="true" />
             <element signature="e#2594#2595#0" expanded="true" />
-            <marker date="1509018351000" expanded="false" signature="2496:2507" ph=" { " />
-            <marker date="1509018351000" expanded="false" signature="2525:2531" ph=" }" />
+            <marker date="1509062308000" expanded="false" signature="2496:2507" ph=" { " />
+            <marker date="1509062308000" expanded="false" signature="2525:2531" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -645,8 +648,8 @@
             <element signature="e#2468#2469#0" expanded="true" />
             <element signature="e#2560#2561#0" expanded="true" />
             <element signature="e#2594#2595#0" expanded="true" />
-            <marker date="1509018351000" expanded="false" signature="2496:2507" ph=" { " />
-            <marker date="1509018351000" expanded="false" signature="2525:2531" ph=" }" />
+            <marker date="1509062308000" expanded="false" signature="2496:2507" ph=" { " />
+            <marker date="1509062308000" expanded="false" signature="2525:2531" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -717,8 +720,8 @@
             <element signature="e#2468#2469#0" expanded="true" />
             <element signature="e#2560#2561#0" expanded="true" />
             <element signature="e#2594#2595#0" expanded="true" />
-            <marker date="1509018351000" expanded="false" signature="2496:2507" ph=" { " />
-            <marker date="1509018351000" expanded="false" signature="2525:2531" ph=" }" />
+            <marker date="1509062308000" expanded="false" signature="2496:2507" ph=" { " />
+            <marker date="1509062308000" expanded="false" signature="2525:2531" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -743,8 +746,8 @@
             <element signature="e#2468#2469#0" expanded="true" />
             <element signature="e#2560#2561#0" expanded="true" />
             <element signature="e#2594#2595#0" expanded="true" />
-            <marker date="1509018351000" expanded="false" signature="2496:2507" ph=" { " />
-            <marker date="1509018351000" expanded="false" signature="2525:2531" ph=" }" />
+            <marker date="1509062308000" expanded="false" signature="2496:2507" ph=" { " />
+            <marker date="1509062308000" expanded="false" signature="2525:2531" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -779,14 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ActiveWave.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -797,16 +792,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/WaveFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="55" column="30" lean-forward="false" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+        <state relative-caret-position="262">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ActiveWave.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/WaveGrid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="946">
-          <caret line="69" column="65" lean-forward="false" selection-start-line="69" selection-start-column="65" selection-end-line="69" selection-end-column="65" />
+        <state relative-caret-position="400">
+          <caret line="45" column="51" lean-forward="false" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
           <folding>
             <element signature="e#1555#1567#0" expanded="true" />
             <element signature="e#2346#2347#0" expanded="true" />
@@ -815,8 +818,8 @@
             <element signature="e#2468#2469#0" expanded="true" />
             <element signature="e#2560#2561#0" expanded="true" />
             <element signature="e#2594#2595#0" expanded="true" />
-            <marker date="1509018351000" expanded="false" signature="2496:2507" ph=" { " />
-            <marker date="1509018351000" expanded="false" signature="2525:2531" ph=" }" />
+            <marker date="1509062308000" expanded="false" signature="2496:2507" ph=" { " />
+            <marker date="1509062308000" expanded="false" signature="2525:2531" ph=" }" />
           </folding>
         </state>
       </provider>
