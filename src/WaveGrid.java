@@ -49,11 +49,7 @@ public class WaveGrid {
         for (ActiveWave activeWave : this.activeWaves) {
             for (int i = 0; i < originalCopy.length; i++) {
                 for (int j = 0; j < originalCopy[i].length; j++) {
-                    Point2D newPoint = activeWave.calculateOffset(originalCopy[i][j].getX(), originalCopy[i][j].getY());
-                    double newX = (newPoint.getX() + originalGrid[i][j].getX()) / 2.0;
-                    double newY = (newPoint.getY() + originalGrid[i][j].getY()) / 2.0;
-
-                    originalCopy[i][j] = new Point2D.Double(newX, newY);
+                    activeGrid[i][j] = activeWave.calculateOffset(originalGrid[i][j].getX(), originalGrid[i][j].getY());
                 }
             }
 
@@ -61,8 +57,6 @@ public class WaveGrid {
 
             if (activeWave.getRadius() > this.width) toRemove.add(activeWave);
         }
-
-        this.activeGrid = originalCopy.clone();
 
         this.activeWaves.removeAll(toRemove);
     }
