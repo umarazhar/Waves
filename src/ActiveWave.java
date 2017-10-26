@@ -17,17 +17,25 @@ public class ActiveWave {
         double d = distance(x, y, i, j);
         double offset = d - r;
 
-        if (Math.abs(offset) > period) return new Point2D.Double(i, j);
+        if (Math.abs(offset) > period / 2) return new Point2D.Double(i, j);
 
-        double angle = Math.atan((j - y) / (i - x));
+        double angle = Math.atan2((j - y), (i - x));
 
         double xoffset = offset * Math.cos(angle);
         double yoffset = offset * Math.sin(angle);
 
-        return new Point2D.Double(this.x + xoffset, this.y + yoffset);
+        return new Point2D.Double(i + xoffset, j + yoffset);
+    }
+
+    public void updateRadius() {
+        this.r += 1;
     }
 
     private double distance(double x1, double y1, double x2, double y2) {
         return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+    }
+
+    public double getRadius() {
+        return this.r;
     }
 }
