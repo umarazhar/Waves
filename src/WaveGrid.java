@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 public class WaveGrid {
 
+    private final int X_SPREAD = 10;
+    private final int Y_SPREAD = 10;
+
     private int width, height;
     private Point2D[][] originalGrid;
     private Point2D[][] activeGrid;
@@ -16,21 +19,23 @@ public class WaveGrid {
 
         this.activeWaves = new ArrayList<ActiveWave>();
 
-        int xSpread = 10;
-        int ySpread = 10;
+        this.originalGrid = createGrid(this.width, this.height);
+        this.activeGrid = createGrid(this.width, this.height);
+    }
 
-        int xPoints = this.width / xSpread;
-        int yPoints = this.height / ySpread;
+    private Point2D[][] createGrid(int width, int height) {
+        int xPoints = width / X_SPREAD;
+        int yPoints = height / Y_SPREAD;
 
-        this.originalGrid = new Point2D[xPoints][yPoints];
-        this.activeGrid = new Point2D[xPoints][yPoints];
+        Point2D[][] newGrid = new Point2D[xPoints][yPoints];
 
-        for (int i = 0; i < originalGrid.length; i++) {
-            for (int j = 0; j < originalGrid[i].length; j++) {
-                this.originalGrid[i][j] = new Point2D.Double(i * xSpread, j * ySpread);
-                this.activeGrid[i][j] = new Point2D.Double(i * xSpread, j * ySpread);
+        for (int i = 0; i < newGrid.length; i++) {
+            for (int j = 0; j < newGrid[i].length; j++) {
+                newGrid[i][j] = new Point2D.Double(i * X_SPREAD, j * Y_SPREAD);
             }
         }
+
+        return newGrid;
     }
 
     public void triggerWave(double x, double y) {
@@ -44,16 +49,12 @@ public class WaveGrid {
 
         ArrayList<ActiveWave> toRemove = new ArrayList<ActiveWave>();
 
-        Point2D[][] originalCopy = originalGrid.clone();
+        Point2D[][] originalCopy = createGrid(this.width, this.height);
 
         for (ActiveWave activeWave : this.activeWaves) {
             for (int i = 0; i < originalCopy.length; i++) {
                 for (int j = 0; j < originalCopy[i].length; j++) {
-                    Point2D newPoint = activeWave.calculateOffset(originalCopy[i][j].getX(), originalCopy[i][j].getY());
-                    double newX = (newPoint.getX() + originalGrid[i][j].getX()) / 2.0;
-                    double newY = (newPoint.getY() + originalGrid[i][j].getY()) / 2.0;
-
-                    originalCopy[i][j] = new Point2D.Double(newX, newY);
+                    originalCopy[i][j] = activeWave.calculateOffset(originalCopy[i][j].getX(), originalCopy[i][j].getY());
                 }
             }
 
@@ -62,7 +63,7 @@ public class WaveGrid {
             if (activeWave.getRadius() > this.width) toRemove.add(activeWave);
         }
 
-        this.activeGrid = originalCopy.clone();
+        this.activeGrid = originalCopy;
 
         this.activeWaves.removeAll(toRemove);
     }
