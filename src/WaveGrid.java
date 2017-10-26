@@ -13,6 +13,8 @@ public class WaveGrid {
 
     private ArrayList<ActiveWave> activeWaves;
 
+    private double outOfBoundsSize;
+
     public WaveGrid(int width, int height) {
         this.width = width;
         this.height = height;
@@ -21,6 +23,8 @@ public class WaveGrid {
 
         this.originalGrid = createGrid(this.width, this.height);
         this.activeGrid = createGrid(this.width, this.height);
+
+        this.outOfBoundsSize = Math.sqrt(Math.pow(this.width, 2) + Math.pow(this.height, 2));
     }
 
     private Point2D[][] createGrid(int width, int height) {
@@ -63,7 +67,7 @@ public class WaveGrid {
 
                 activeWave.updateRadius();
 
-                if (activeWave.getRadius() > this.width * Math.sqrt(2)) toRemove.add(activeWave);
+                if (activeWave.getRadius() > this.outOfBoundsSize) toRemove.add(activeWave);
             }
         }
 
