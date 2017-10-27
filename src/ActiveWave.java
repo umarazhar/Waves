@@ -5,12 +5,14 @@ public class ActiveWave {
     private double x, y; // point of origin
     private double r; // radius
     private double period;
+    private double power;
 
-    public ActiveWave(double x, double y, double period) {
+    public ActiveWave(double x, double y, double period, double power) {
         this.x = x;
         this.y = y;
         this.r = 1;
         this.period = period;
+        this.power = power;
     }
 
     public Point2D calculateOffset(double i, double j) {
@@ -34,8 +36,8 @@ public class ActiveWave {
         return new Point2D.Double(rx + xoffset, ry + yoffset);
     }
 
-    public void updateRadius() {
-        this.r += 5;
+    public void updateWave() {
+        this.r += power;
     }
 
     private double distance(double x1, double y1, double x2, double y2) {

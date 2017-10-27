@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class WaveGrid {
 
-    private final int X_SPREAD = 10;
-    private final int Y_SPREAD = 10;
+    private final int X_SPREAD = 20;
+    private final int Y_SPREAD = 20;
 
     private int width, height;
     private Point2D[][] originalGrid;
@@ -42,8 +42,8 @@ public class WaveGrid {
         return newGrid;
     }
 
-    public void triggerWave(double x, double y) {
-        ActiveWave newWave = new ActiveWave(x, y, 50);
+    public void triggerWave(double x, double y, double power) {
+        ActiveWave newWave = new ActiveWave(x, y, 50, power);
 
         synchronized (this.activeWaves) {
             this.activeWaves.add(newWave);
@@ -65,7 +65,7 @@ public class WaveGrid {
                     }
                 }
 
-                activeWave.updateRadius();
+                activeWave.updateWave();
 
                 if (activeWave.getRadius() > this.outOfBoundsSize) toRemove.add(activeWave);
             }
